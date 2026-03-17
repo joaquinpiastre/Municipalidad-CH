@@ -67,9 +67,19 @@ npm run preview
 - Facebook: facebook.com/CHMLChosMalal
 - Horario: lunes a viernes 7:00 a 14:00 hs
 
+## Despliegue en Vercel (y que se vea el ícono)
+
+Para que el **favicon y el logo** aparezcan en producción:
+
+1. Copiá tu archivo del logo a la carpeta **`public/`** del proyecto.
+2. El archivo debe llamarse **`Imagen_CH.jpg`** (mismo nombre y extensión).
+3. Hacé commit y push; al desplegar en Vercel, `public/` se copia a la raíz del sitio y `/Imagen_CH.jpg` funcionará.
+
+Si no está `public/Imagen_CH.jpg`, en Vercel se usará el favicon de respaldo (`favicon.svg`).
+
 ## Personalización
 
-- **Logo (Imagen_CH.jpg):** Colocá el archivo `Imagen_CH.jpg` en la carpeta `public/`. Se usa como favicon y como logo en el header y en el Hero de la página de inicio. La ruta está definida en `src/constants/site.js` (`logoImage`).
+- **Logo (Imagen_CH.jpg):** Colocá el archivo `Imagen_CH.jpg` en la carpeta `public/`. Se usa como favicon y como logo en el header y en el Hero. La ruta está en `src/constants/site.js` (`logoImage`).
 - **Colores del logo:** La paleta está en `src/styles/global.css` (variables `--color-primary`, `--color-secondary`, `--color-accent`, etc.). Ajustá esos valores para que coincidan exactamente con los colores de tu logo si hace falta.
 - **Foto de fondo del Hero:** Por defecto se usa una imagen de paisaje (Unsplash). Para usar una foto propia de Chos Malal, colocá la imagen en `public/hero-chosmalal.jpg` y en `src/styles/home/Hero.module.css` reemplazá la URL de `background-image` por `url("/hero-chosmalal.jpg")`.
 "# Municipalidad-CH" 

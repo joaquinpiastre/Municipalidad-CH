@@ -1,6 +1,7 @@
 export const SITE = {
   name: 'Municipalidad de Chos Malal',
   tagline: 'Capital Histórica y Cultural del Neuquén',
+    // Debe existir public/Imagen_CH.jpg para que se vea en Vercel
   logoImage: '/Imagen_CH.jpg',
   address: 'Belgrano Nº 98, CP 8353',
   phone: '(02948) 41-3722',

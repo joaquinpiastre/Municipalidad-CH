@@ -1,0 +1,38 @@
+.page {
+  padding: var(--spacing-xl) var(--spacing-md) var(--spacing-section);
+  animation: fadeIn 0.4s ease-out;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.page h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+@media (max-width: 575px) {
+  .page {
+    padding: var(--spacing-lg) var(--spacing-md) var(--spacing-xxl);
+  }
+
+  .page h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .page h1 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}

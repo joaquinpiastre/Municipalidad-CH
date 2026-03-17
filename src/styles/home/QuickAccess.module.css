@@ -1,0 +1,118 @@
+.section {
+  padding: var(--spacing-section) var(--spacing-md);
+  background: linear-gradient(180deg, var(--color-white) 0%, var(--color-gray-100) 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gridItem {
+  animation: fadeInUp 0.5s ease-out both;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  min-height: 72px;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--color-text);
+  transition: border-color var(--transition-smooth), box-shadow var(--transition-smooth), transform var(--transition-smooth);
+  box-shadow: var(--shadow-sm);
+}
+
+.card:hover {
+  border-color: var(--color-secondary-light);
+  box-shadow: var(--shadow-md);
+  color: var(--color-primary);
+  transform: translateY(-3px);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  color: var(--color-white);
+}
+
+.label {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 575px) {
+  .section {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+
+  .grid {
+    gap: var(--spacing-sm);
+  }
+
+  .card {
+    padding: var(--spacing-md);
+    min-height: 64px;
+  }
+
+  .icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .icon svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (min-width: 576px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .grid {
+    gap: var(--spacing-lg);
+  }
+
+  .card {
+    padding: var(--spacing-xl);
+    min-height: 80px;
+  }
+
+  .label {
+    font-size: 1rem;
+  }
+}

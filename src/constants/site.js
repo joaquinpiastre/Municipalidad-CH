@@ -1,0 +1,15 @@
+export const SITE = {
+  name: 'Municipalidad de Chos Malal',
+  tagline: 'Capital Histórica y Cultural del Neuquén',
+  logoImage: '/Imagen_CH.jpg',
+  address: 'Belgrano Nº 98, CP 8353',
+  phone: '(02948) 41-3722',
+  email: 'recaudaciones@chosmalal.gob.ar',
+  emailVentanilla: 'ventanillaunicachml@gmail.com',
+  oficinaVirtual: 'https://chosmalal.oficinavirtual.live',
+  horario: 'Lunes a viernes de 7:00 a 14:00 hs',
+  intendente: 'Nicolás A. Albarracín',
+  fundacion: '4 de agosto de 1887',
+  capitalHasta: '1904',
+  facebook: 'https://facebook.com/CHMLChosMalal',
+}

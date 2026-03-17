@@ -1,0 +1,114 @@
+.header {
+  margin-bottom: var(--spacing-xxl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 var(--spacing-sm);
+}
+
+.subtitle {
+  font-size: 1.0625rem;
+  color: var(--color-text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.section {
+  margin-bottom: var(--spacing-section);
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0 0 var(--spacing-md);
+}
+
+.intro {
+  margin: 0;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  padding: var(--spacing-lg);
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+}
+
+.category {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-sm);
+}
+
+.cardTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0 0 var(--spacing-sm);
+}
+
+.cardDesc {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.mapPlaceholder {
+  padding: var(--spacing-xl);
+  background: var(--color-off-white);
+  border: 1px dashed var(--color-gray-300);
+  border-radius: var(--radius-md);
+}
+
+.mapPlaceholder p {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.ctaBlock {
+  padding: var(--spacing-xl);
+  background: var(--color-gray-100);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.ctaText {
+  margin: 0 0 var(--spacing-sm);
+  font-size: 1.0625rem;
+  font-weight: 500;
+}
+
+.contact {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

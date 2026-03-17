@@ -46,17 +46,96 @@
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xxl);
+}
+
+.textBlock {
+  width: 100%;
+  max-width: 560px;
+}
+
+/* Marco del logo a la derecha con esquinas decorativas */
+.logoFrame {
+  position: relative;
+  flex-shrink: 0;
+  padding: var(--spacing-md);
+  animation: heroFadeIn 0.6s ease-out 0.15s both;
+}
+
+.logoFrameInner {
+  position: relative;
+  padding: var(--spacing-xl);
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--radius-lg);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.logoFrameInner::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(228, 192, 77, 0.4);
+  border-radius: calc(var(--radius-lg) - 4px);
+  pointer-events: none;
 }
 
 .logo {
-  max-height: 100px;
+  display: block;
+  max-height: 120px;
   width: auto;
   object-fit: contain;
-  margin-bottom: var(--spacing-lg);
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
-  animation: heroFadeIn 0.6s ease-out 0.05s both;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* Esquinas decorativas tipo marco institucional */
+.logoCorner {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-color: var(--color-accent-light);
+  border-style: solid;
+  border-width: 0;
+  opacity: 0.9;
+}
+
+.logoCornerTl {
+  top: var(--spacing-md);
+  left: var(--spacing-md);
+  border-top-width: 3px;
+  border-left-width: 3px;
+  border-radius: 4px 0 0 0;
+}
+
+.logoCornerTr {
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  border-top-width: 3px;
+  border-right-width: 3px;
+  border-radius: 0 4px 0 0;
+}
+
+.logoCornerBl {
+  bottom: var(--spacing-md);
+  left: var(--spacing-md);
+  border-bottom-width: 3px;
+  border-left-width: 3px;
+  border-radius: 0 0 0 4px;
+}
+
+.logoCornerBr {
+  bottom: var(--spacing-md);
+  right: var(--spacing-md);
+  border-bottom-width: 3px;
+  border-right-width: 3px;
+  border-radius: 0 0 4px 0;
 }
 
 .badge {
@@ -120,6 +199,47 @@
     padding: var(--spacing-xl) var(--spacing-md);
   }
 
+  .logoFrame {
+    order: -1;
+  }
+
+  .logoFrameInner {
+    padding: var(--spacing-lg);
+  }
+
+  .logo {
+    max-height: 90px;
+  }
+
+  .logoCorner {
+    width: 18px;
+    height: 18px;
+  }
+
+  .logoCornerTl {
+    top: var(--spacing-lg);
+    left: var(--spacing-lg);
+    border-width: 2px 0 0 2px;
+  }
+
+  .logoCornerTr {
+    top: var(--spacing-lg);
+    right: var(--spacing-lg);
+    border-width: 2px 2px 0 0;
+  }
+
+  .logoCornerBl {
+    bottom: var(--spacing-lg);
+    left: var(--spacing-lg);
+    border-width: 0 0 2px 2px;
+  }
+
+  .logoCornerBr {
+    bottom: var(--spacing-lg);
+    right: var(--spacing-lg);
+    border-width: 0 2px 2px 0;
+  }
+
   .title {
     font-size: 1.65rem;
   }
@@ -142,6 +262,17 @@
   .hero {
     min-height: 480px;
     padding: var(--spacing-section) var(--spacing-md);
+  }
+
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-xxl);
+  }
+
+  .textBlock {
+    max-width: 52%;
   }
 
   .title {
